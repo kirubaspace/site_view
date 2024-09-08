@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Website Visit Counter</title>
+  <style>
+    body {
+      font-family: 'Roboto', sans-serif;
+      width: 350px;
+      margin: 20px;
+      background-color: #f8f9fa;
+      border-radius: 8px;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    }
+
+    h1 {
+      color: #333;
+      font-size: 24px;
+      margin-bottom: 20px;
+      text-align: center;
+      padding-top: 20px;
+    }
+
+    #site-list {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .site-count {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      padding: 12px 15px;
+      border-bottom: 1px solid #f0f0f0;
+      transition: background-color 0.2s, transform 0.2s, box-shadow 0.2s;
+      border-radius: 5px;
+      margin-bottom: 8px;
+      box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+    }
+
+    .site-count:hover {
+      background-color: #f5f5f5;
+      transform: translateY(-2px);
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    }
+
+    .site-name {
+      font-weight: 500;
+      flex-grow: 1;
+      margin-right: 10px;
+      min-width: 200px;
+    }
+
+    .visit-count {
+      color: #666;
+      background-color: #f0f0f0;
+      padding: 5px 8px;
+      border-radius: 3px;
+      white-space: nowrap;
+    }
+
+    .times-label {
+      margin-right: 5px;
+    }
+
+    .filter-options {
+      display: flex;
+      justify-content: flex-end;
+      margin-bottom: 15px;
+    }
+
+    .filter-option {
+      padding: 5px 10px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      cursor: pointer;
+      margin-left: 10px;
+    }
+
+    .filter-option.active {
+      background-color: #eee;
+    }
+  </style>
+</head>
+<body>
+  <h1>Website Visits</h1>
+  <div class="filter-options">
+    <div class="filter-option active" data-filter="day">Day</div>
+    <div class="filter-option" data-filter="week">Week</div>
+    <div class="filter-option" data-filter="month">Month</div>
+  </div>
+  <div id="site-list"></div>
+
+  <script src="popup.js"></script>
+</body>
+</html>
